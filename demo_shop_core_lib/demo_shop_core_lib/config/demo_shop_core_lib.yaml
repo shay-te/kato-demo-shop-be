@@ -1,0 +1,22 @@
+# @package _global_
+core_lib:
+  data:
+    sqlalchemy:
+      _target_: core_lib.connection.sql_alchemy_connection_factory.SqlAlchemyConnectionFactory
+      config:
+        log_queries: false
+        create_db: false
+        session:
+          pool_recycle: 3200
+          pool_pre_ping: false
+        # sqlite, so no database server is needed. The file is relative to the
+        # working directory; a host overrides `url` to point anywhere else.
+        url:
+          protocol: sqlite
+          username: ~
+          password: ~
+          host: ~
+          port: ~
+          file: demo_shop.db
+  alembic:
+    version_table: demo_shop_alembic_version
