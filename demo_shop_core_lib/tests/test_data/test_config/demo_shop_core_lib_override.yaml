@@ -1,0 +1,15 @@
+# @package _global_
+# Test-safe overrides: an in-memory sqlite database, tables from create_all.
+# The WHOLE url is overridden so no key falls back to the packaged value.
+core_lib:
+  data:
+    sqlalchemy:
+      config:
+        create_db: true
+        url:
+          protocol: sqlite
+          username: ~
+          password: ~
+          host: ~
+          port: ~
+          file: ':memory:'

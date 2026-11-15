@@ -1,0 +1,9 @@
+include requirements.txt
+include LICENSE
+include README.md
+
+
+global-exclude *.pyc
+global-exclude __pycache__
+recursive-include demo_shop_core_lib *.yaml
+recursive-include demo_shop_core_lib/data_layers/data/db/migrations *.mako .migration_ver

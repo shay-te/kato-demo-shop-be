@@ -1,0 +1,6 @@
+# core-lib from the checkout beside this repo (PyPI's 0.2.2 pins hydra-core 1.2,
+# which does not import on Python 3.11). compat mode: Hydra finds the
+# hydra_plugins search-path plugins only on a plain sys.path entry.
+-e ../core-lib --config-settings editable_mode=compat
+-e ./demo_shop_core_lib --config-settings editable_mode=compat
+flask

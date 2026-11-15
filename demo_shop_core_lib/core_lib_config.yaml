@@ -1,0 +1,10 @@
+defaults:
+  - _self_
+  - core_lib
+  - demo_shop_core_lib
+
+core_lib_module: demo_shop_core_lib
+
+hydra:
+  run:
+    dir: .
